@@ -21,3 +21,16 @@ This project demonstrates how journaling can preserve file system integrity by f
 - Multiple validation and consistency checks  
 
 ---
+## Filesystem Layout
+
+| Component | Blocks | Description |
+|------------|---------|-------------|
+| Superblock | 1 | File system metadata descriptor |
+| Journal | 16 | Logs all metadata updates |
+| Inode Bitmap | 1 | Tracks used/free inodes |
+| Data Bitmap | 1 | Tracks used/free data blocks |
+| Inode Table | 2 | Contains inode structures |
+| Data Blocks | 64 | User and directory data |
+| **Total** | **85 blocks (4 KB each)** | — |
+
+---
