@@ -106,6 +106,16 @@ printf '\0\0\0\0\0\0\0\0' | dd of=vsfs.img bs=1 seek=$((1*4096)) count=8 conv=no
 ./journal install
 ```
 ---
+## Example Workflow
+
+```bash
+./mkfs
+./journal create file1
+./validator
+./journal install
+./validator
+```
+
 ## Future Improvements
 
 - Add journaling for data blocks (not only metadata)  
