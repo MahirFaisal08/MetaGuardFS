@@ -11,3 +11,13 @@ It implements **metadata journaling** to ensure reliability and consistency afte
 This project demonstrates how journaling can preserve file system integrity by first logging metadata updates to a dedicated journal before applying them to their actual disk locations.
 
 ---
+## Features
+- Metadata journaling for crash consistency  
+- Safe recovery and atomic metadata updates  
+- Two journaling operations: `create` and `install`  
+- Journal header with magic number & used bytes tracking  
+- COMMIT record for transaction sealing  
+- Journal replay and checkpointing  
+- Multiple validation and consistency checks  
+
+---
