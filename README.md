@@ -70,26 +70,17 @@ gcc -Wall -Wextra -o journal journal.c
 ./mkfs
 ./validator
 ls -l vsfs.img journal mkfs validator
-
-
+```
+---
 ## Validation & Debug Commands
 
 **Dump home area (excluding journal):**  
-./mkfs  
-dd if=vsfs.img of=home_before.bin bs=4096 skip=17 count=68 status=none  
+```bash
+./mkfs
+dd if=vsfs.img of=home_before.bin bs=4096 skip=17 count=68 status=none
 
-**Create and check difference:**  
-./journal create x  
-dd if=vsfs.img of=home_after.bin bs=4096 skip=17 count=68 status=none  
-sha256sum home_before.bin home_after.bin  
+# Create and check difference:
+./journal create x
+dd if=vsfs.img of=home_after.bin bs=4096 skip=17 count=68 status=none
+sha256sum home_before.bin home_after.bin
 
-**Stress test - fill journal until full:**  
-./mkfs  
-for i in $(seq 1 200); do ./journal create f$i || break; done  
-
-**Corrupt journal header manually:**  
-./mkfs  
-printf '\0\0\0\0\0\0\0\0' | dd of=vsfs.img bs=1 seek=$((1*4096)) count=8 conv=notrunc status=none  
-./journal install  
-
-```
