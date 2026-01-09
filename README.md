@@ -129,8 +129,8 @@ printf '\0\0\0\0\0\0\0\0' | dd of=vsfs.img bs=1 seek=$((1*4096)) count=8 conv=no
 
 **Name:** Md. Mahir Faisal  
 **Project:** MetaGuardFS – Metadata Journaling for VSFS  
-**Year:** ![Year](https://img.shields.io/badge/2026-blue)  
-**Language:** ![Language](https://img.shields.io/badge/C-orange)
+**Year:** `2026`  
+**Language:** `C`
 
 ---
 ## License
