@@ -34,3 +34,10 @@ This project demonstrates how journaling can preserve file system integrity by f
 | **Total** | **85 blocks (4 KB each)** | — |
 
 ---
+## Compilation & Run Commands
+
+```bash
+# Compile all programs
+gcc -Wall -Wextra -o mkfs mkfs.c
+gcc -Wall -Wextra -o validator validator.c
+gcc -Wall -Wextra -o journal journal.c
