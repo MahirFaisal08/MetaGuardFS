@@ -21,7 +21,7 @@ This project demonstrates how journaling can preserve file system integrity by f
 - Multiple validation and consistency checks  
 
 ---
-## 🧠 Project Specs
+## Project Specs
 
 | Property | Details |
 |-----------|----------|
