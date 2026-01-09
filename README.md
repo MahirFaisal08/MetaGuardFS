@@ -21,6 +21,18 @@ This project demonstrates how journaling can preserve file system integrity by f
 - Multiple validation and consistency checks  
 
 ---
+## 🧠 Project Specs
+
+| Property | Details |
+|-----------|----------|
+| **Type** | File System Project |
+| **Focus** | Metadata Journaling (Crash Consistency) |
+| **Language** | C |
+| **Block Size** | 4 KB |
+| **Total Blocks** | 85 |
+| **Status** | Completed |
+
+---
 ## Filesystem Layout
 
 | Component | Blocks | Description |
