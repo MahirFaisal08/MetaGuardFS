@@ -94,3 +94,24 @@ printf '\0\0\0\0\0\0\0\0' | dd of=vsfs.img bs=1 seek=$((1*4096)) count=8 conv=no
 ./journal install
 ```
 ---
+## Future Improvements
+
+- Add journaling for data blocks (not only metadata)  
+- Implement partial transaction rollback  
+- Add visualization for journal replay  
+- Extend to multi-level directory structure  
+- Include recovery simulation after crash  
+
+---
+## Author
+
+**Name:** Mahir Faisal  
+**Project:** MetaGuardFS – Metadata Journaling for VSFS  
+**Year:** 2026  
+**Language:** C 
+
+---
+## License
+
+This project is licensed under the **MIT License** – you are free to use, modify, and distribute this software with proper credit.  
+For details, see the LICENSE file in this repository or visit the official MIT License page.
