@@ -127,13 +127,17 @@ printf '\0\0\0\0\0\0\0\0' | dd of=vsfs.img bs=1 seek=$((1*4096)) count=8 conv=no
 ---
 ## Author
 
-**Name:** Mahir Faisal  
+**Name:** Md. Mahir Faisal  
 **Project:** MetaGuardFS – Metadata Journaling for VSFS  
-**Year:** 2026  
-**Language:** C 
+**Year:** ![Year](https://img.shields.io/badge/2026-blue)  
+**Language:** ![Language](https://img.shields.io/badge/C-orange)
 
 ---
 ## License
 
 This project is licensed under the **MIT License** – you are free to use, modify, and distribute this software with proper credit.  
 For details, see the LICENSE file in this repository or visit the official MIT License page.
+---
+⭐ **Star this repo** if you found it helpful!  
+📫 For any queries or collaborations, contact **[Md. Mahir Faisal](https://github.com/MahirFaisal08)**
+---
