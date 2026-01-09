@@ -41,3 +41,32 @@ This project demonstrates how journaling can preserve file system integrity by f
 gcc -Wall -Wextra -o mkfs mkfs.c
 gcc -Wall -Wextra -o validator validator.c
 gcc -Wall -Wextra -o journal journal.c
+
+# Create a clean image and check consistency
+./mkfs
+./validator
+
+# Create operations (journal logging)
+./journal create file1
+./validator
+./journal create file2
+./validator
+
+# Apply committed transactions
+./journal install
+./validator
+
+# Multiple create + install tests
+./mkfs
+./journal create a
+./journal create b
+./journal create c
+./validator
+./journal install
+./validator
+./journal install
+
+# Final checks
+./mkfs
+./validator
+ls -l vsfs.img journal mkfs validator
