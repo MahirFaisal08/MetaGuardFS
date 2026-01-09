@@ -73,7 +73,7 @@ ls -l vsfs.img journal mkfs validator
 ```
 
 ## Validation & Debug Commands
-```
+```base
 # Dump home area (excluding journal)
 ./mkfs
 dd if=vsfs.img of=home_before.bin bs=4096 skip=17 count=68 status=none
